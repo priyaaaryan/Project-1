@@ -1,14 +1,18 @@
-var quote = document.querySelector('#quote');
-var author = document.querySelector('#author');
-var InspQtebtn = document.querySelector('#btn');
-
+//Declaring the needed variables
+var content = document.querySelector("#quote");
+var auth = document.querySelector("#auth");
+var InspQtebtn = document.querySelector("#btn");
+ 
+//Adding event listener
 btn.addEventListener("click", getInsQuote);
-
+ 
+//Declaring function to get inspirational quote
 function getInsQuote() {
-    fetch("http://quotable.io/random")
-    .then(res => res.json())
-    .then(data => {
-        quote.innerHTML = data.content;
-        author.innerHTML= data.author;
+    fetch("https://api.quotable.io/random")
+    .then(function(res){
+        res.json().then(function(data){
+            content.innerHTML = data.content;
+            auth.innerHTML= data.author;
+        })
     })
 }
