@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 //Declaring the needed variables
 var content = document.querySelector("#quote");
 var auth = document.querySelector("#auth");
